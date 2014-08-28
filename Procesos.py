@@ -60,13 +60,13 @@ def procesos(env, nombre,memoria, RAM, CPU, ESPERA, instrucciones,cantRAM):
 
 
     tiempoProceso= env.now -arrive                                                                  #se calcula el tiempo total que tomó ejecutar todas las instrucciones
-    print('%7.4f %s: Tiempo de ejecucion Terminado!! :D %s' % (env.now, nombre, tiempoProceso))     #se muestra al usuario
+    print('%7.4f %s: FIN DE EJECUCION DE PROCESO  %s' % (env.now, nombre, tiempoProceso))     #se muestra al usuario
 
 
 
     with RAM.put(memoria) as reqDevolverRAM:
         yield reqDevolverRAM	#se devuelve la memoria                                             #se devuelve la memoria Ram tomada para la ejecucion del proceso
-        print('%7.4f %s: regresando la memoria RAM... %s' % (env.now, nombre, memoria))             #se muestra al usuario, que se devuelve la memoria
+        print('%7.4f %s: Devolviendo Memoria ram ... %s' % (env.now, nombre, memoria))             #se muestra al usuario, que se devuelve la memoria
 
 
 
